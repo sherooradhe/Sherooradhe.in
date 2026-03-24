@@ -2,173 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheroo ❤️ Radhe</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<title>My Love World ❤️</title>
 
 <style>
-body{
-    margin:0;
-    font-family:'Playfair Display', serif;
-    background: linear-gradient(180deg,#0d0d0d,#1a001a);
-    color:white;
-    scroll-behavior:smooth;
+body {
+  margin: 0;
+  font-family: Arial;
+  overflow-x: hidden;
+  background: black;
+  color: white;
 }
 
 /* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    background: linear-gradient(to bottom,#1a001a,#000);
-    text-align:center;
-}
-.hero h1{
-    font-size:40px;
-    color:#ff4d88;
-    animation:fade 2s ease-in;
-}
-.btn{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    background:#ff4d88;
-    color:white;
-    border-radius:25px;
-    cursor:pointer;
-    transition:0.3s;
-}
-.btn:hover{
-    box-shadow:0 0 20px #ff4d88;
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* TIMELINE */
-.timeline{
-    padding:50px 20px;
-}
-.item{
-    margin:30px 0;
-    border-left:2px solid pink;
-    padding-left:20px;
-}
-.item h3{
-    color:#ff99cc;
+.hero h1 {
+  font-size: 3rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 20px #ff4d6d;
 }
 
-/* GALLERY */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:10px;
-    padding:20px;
-}
-.gallery img{
-    width:100%;
-    border-radius:10px;
-    transition:0.3s;
-}
-.gallery img:hover{
-    transform:scale(1.1);
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* MESSAGE */
-.message{
-    padding:40px;
-    text-align:center;
-    font-style:italic;
+.btn:hover {
+  transform: scale(1.1);
 }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    color:#ff4d88;
+/* LOVE SECTION */
+.section {
+  padding: 50px;
+  text-align: center;
 }
 
-/* ANIMATION */
-@keyframes fade{
-    from{opacity:0;}
-    to{opacity:1;}
+.box {
+  background: rgba(255,255,255,0.1);
+  margin: 15px auto;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
 }
 
-/* HEART FLOAT */
-.heart{
-    position:fixed;
-    color:red;
-    animation:float 5s infinite;
+.box:hover {
+  transform: scale(1.05);
 }
-@keyframes float{
-    0%{transform:translateY(100vh);}
-    100%{transform:translateY(-10vh);}
+
+/* FLOATING HEARTS */
+.heart {
+  position: fixed;
+  color: red;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(100vh);}
+  100% {transform: translateY(-10vh);}
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Ek choti si duniya… sirf tumhare liye 💖</h1>
-    <button class="btn" onclick="scrollToSection()">Enter My World</button>
-</section>
+<div class="hero">
+  <h1>Ek Duniya Sirf Tumhare Liye ❤️</h1>
+  <button class="btn" onclick="scrollDown()">Enter My World</button>
+</div>
 
-<!-- LOVE STORY -->
-<section class="timeline" id="story">
-    <div class="item">
-        <h3>First Meet</h3>
-        <p>Jab tumhe pehli baar dekha… duniya ruk si gayi 💫</p>
-    </div>
-    <div class="item">
-        <h3>First Talk</h3>
-        <p>Baatein chhoti thi… par feeling gehri thi 💖</p>
-    </div>
-    <div class="item">
-        <h3>First Smile</h3>
-        <p>Tumhari muskaan… meri duniya ban gayi 😍</p>
-    </div>
-</section>
+<div class="section" id="love">
+  <h2>Our Journey 💕</h2>
+
+  <div class="box">🌸 First Meet</div>
+  <div class="box">💬 First Talk</div>
+  <div class="box">😊 First Smile</div>
+  <div class="box">❤️ Falling in Love</div>
+</div>
 
 <!-- MUSIC -->
 <audio autoplay loop>
-    <source src="song.mp3" type="audio/mp3">
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
 </audio>
 
-<!-- GALLERY -->
-<section class="gallery">
-    <img src="img1.jpg">
-    <img src="img2.jpg">
-    <img src="img3.jpg">
-</section>
-
-<!-- MESSAGE -->
-<section class="message">
-    <p>
-    “12 mahine… 12 tareeke… har din tumhe pyar jatane ke liye 💌”
-    </p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    Made with ❤️ by Sheroo Radhe
-</footer>
-
 <script>
-function scrollToSection(){
-    document.getElementById("story").scrollIntoView();
+function scrollDown() {
+  document.getElementById("love").scrollIntoView({ behavior: "smooth" });
 }
 
-/* hearts */
-setInterval(()=>{
-    let heart=document.createElement("div");
-    heart.className="heart";
-    heart.innerHTML="❤️";
-    heart.style.left=Math.random()*100+"vw";
-    document.body.appendChild(heart);
-    setTimeout(()=>heart.remove(),5000);
-},1000);
+// HEART GENERATOR
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.innerHTML = "❤️";
+  heart.className = "heart";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (10 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}, 300);
 </script>
 
 </body>
