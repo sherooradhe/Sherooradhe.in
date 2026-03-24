@@ -83,8 +83,7 @@ body {
 
 <div class="hero">
   <h1>Ek Duniya Sirf Tumhare Liye ❤️</h1>
-  <button class="btn" onclick="scrollDown()">Enter My World</button>
-</div>
+  <button class="btn" onclick="playMusic()">Enter My World</button>
 
 <div class="section" id="love">
   <h2>Our Journey 💕</h2>
@@ -96,7 +95,9 @@ body {
 </div>
 
 <!-- MUSIC -->
-<audio autoplay loop>
+  <audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+  </audio>
   <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
 </audio>
 
@@ -118,7 +119,14 @@ setInterval(() => {
     heart.remove();
   }, 5000);
 }, 300);
-</script>
+  <script>
+function playMusic() {
+  let music = document.getElementById("music");
+  music.play();
+
+  document.getElementById("love").scrollIntoView({ behavior: "smooth" });
+}
+  </script>
 
 </body>
 </html>
