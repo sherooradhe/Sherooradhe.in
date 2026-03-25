@@ -1,67 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Entry ❤️</title>
+<title>My World ❤️</title>
 
 <style>
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  background: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: Arial;
-  color: white;
-}
-
-.box {
   text-align: center;
 }
-
-button {
-  padding: 12px 25px;
-  margin: 10px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.yes {
-  background: white;
-  color: #ff4b5c;
-}
-
-.no {
-  background: #fff;
-  color: red;
-  position: absolute;
-}
 </style>
+
 </head>
 
 <body>
 
-<div class="box">
-  <h1>Radha ❤️ Krishna</h1>
-  <p>Aao andar chale 💫</p>
-
-  <button class="yes" onclick="goNext()">Yes</button>
-  <button class="no" id="noBtn">No</button>
-</div>
-
-<script>
-function goNext(){
-  window.location.href = "page2.html";
-}
-
-let noBtn = document.getElementById("noBtn");
-
-noBtn.addEventListener("mouseover", ()=>{
-  noBtn.style.top = Math.random()*80 + "%";
-  noBtn.style.left = Math.random()*80 + "%";
-});
-</script>
+<h1>Welcome to my world ❤️✨</h1>
+<p>Tum meri life ka sabse beautiful part ho 💖</p>
 
 </body>
 </html>
