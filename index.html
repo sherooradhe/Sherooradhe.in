@@ -40,7 +40,7 @@ button {
 </style>
 </head>
 
-<body>
+<body onclick="playMusic()">
 
 <div class="box">
   <h1>Radha ❤️ Krishna</h1>
@@ -49,6 +49,8 @@ button {
   <button class="yes" onclick="goNext()">Yes</button>
   <button class="no" id="noBtn">No</button>
 </div>
+
+<audio id="bgMusic" src="song.mp3" loop></audio>
 
 <script>
 function goNext(){
@@ -61,12 +63,7 @@ noBtn.addEventListener("mouseover", ()=>{
   noBtn.style.top = Math.random()*80 + "%";
   noBtn.style.left = Math.random()*80 + "%";
 });
-</script>
-  <body onclick="playMusic()">
 
-<audio id="bgMusic" src="song.mp3" loop></audio>
-
-<script>
 function playMusic() {
   let music = document.getElementById("bgMusic");
   music.play();
