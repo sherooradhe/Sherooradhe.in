@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Radha Krishna</title>
+<title>Entry ❤️</title>
 
 <style>
 body {
   margin: 0;
   height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Arial;
   color: white;
-  background: url('radha-krishna.jpg') no-repeat center center/cover;
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-}
-
-.content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.box {
   text-align: center;
-  animation: fadeIn 2s ease;
-}
-
-h1 { font-size: 50px; }
-p { font-size: 20px; margin-top: 10px; }
-
-/* Buttons */
-.buttons {
-  margin-top: 20px;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 25px;
   margin: 10px;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
 .yes {
-  background: #ff758c;
-  color: white;
+  background: white;
+  color: #ff4b5c;
 }
 
 .no {
-  background: white;
-  color: #ff758c;
+  background: #fff;
+  color: red;
   position: absolute;
 }
+</style>
+</head>
 
-/* Animation */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translate(-50%, -40%);}
-  to {opacity: 1; transform: translate(-50%, -50%);}
+<body>
+
+<div class="box">
+  <h1>Radha ❤️ Krishna</h1>
+  <p>Aao andar chale 💫</p>
+
+  <button class="yes" onclick="goNext()">Yes</button>
+  <button class="no" id="noBtn">No</button>
+</div>
+
+<script>
+function goNext(){
+  window.location.href = "page2.html";
+}
+
+let noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", ()=>{
+  noBtn.style.top = Math.random()*80 + "%";
+  noBtn.style.left = Math.random()*80 + "%";
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>My World 💖</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial;
+  text-align: center;
 }
 </style>
 
@@ -66,39 +90,12 @@ button {
 
 <body>
 
-<div class="overlay"></div>
+<h1>Welcome to my world ❤️✨</h1>
+<p>Tum meri life ka sabse beautiful part ho 💖</p>
 
-<div class="content">
-  <h1>Radha ❤️ Krishna</h1>
-  <p>Aao Undar chale</p>
-
-  <div class="buttons">
-    <button class="yes">Yes</button>
-    <button class="no" id="noBtn">No</button>
-  </div>
-</div>
-
-<!-- 🎵 Song -->
-<audio id="music" autoplay>
-  <source src="Song.Mp4" type="audio/mpeg">
+<audio autoplay>
+  <source src="song.mp3" type="audio/mpeg">
 </audio>
-
-<script>
-// 30 sec song stop
-let audio = document.getElementById("music");
-setTimeout(() => { audio.pause(); }, 30000);
-
-// No button bhaagega 😄
-let noBtn = document.getElementById("noBtn");
-
-noBtn.addEventListener("mouseover", () => {
-  let x = Math.random() * window.innerWidth - 100;
-  let y = Math.random() * window.innerHeight - 50;
-
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
-});
-</script>
 
 </body>
 </html>
