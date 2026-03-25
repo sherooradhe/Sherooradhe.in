@@ -62,6 +62,16 @@ noBtn.addEventListener("mouseover", ()=>{
   noBtn.style.left = Math.random()*80 + "%";
 });
 </script>
+  <body onclick="playMusic()">
+
+<audio id="bgMusic" src="song.mp3" loop></audio>
+
+<script>
+function playMusic() {
+  let music = document.getElementById("bgMusic");
+  music.play();
+}
+</script>
 
 </body>
 </html>
