@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Login</title>
+
 <style>
 body {
-  background-color: #f5c1e0; /* red}
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  font-family: Arial;
+}
+
+/* Login Box */
+.box {
+  width: 300px;
+  padding: 40px;
+  background: white;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ff758c;
+  outline: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #ff758c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff5277;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
+
 </head>
+
 <body>
 
-<h1>Welcome Radha ❤️</h1>
-<p>Ek choti si duniya sirf tumhare liye 💖</p>
+<div class="box">
+  <h2>Login ❤️</h2>
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button>Login</button>
+</div>
 
 </body>
 </html>
