@@ -14,21 +14,22 @@ body {
   font-family: Arial;
 }
 
-/* Login Box */
+/* Main Box */
 .box {
-  width: 300px;
-  padding: 40px;
+  width: 350px;
+  padding: 50px;
   background: white;
-  border-radius: 15px;
+  border-radius: 20px;
   text-align: center;
   animation: fadeIn 1.5s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* Input */
 input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 12px;
+  margin: 12px 0;
   border: none;
   border-bottom: 2px solid #ff758c;
   outline: none;
@@ -37,17 +38,30 @@ input {
 /* Button */
 button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: #ff758c;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 button:hover {
   background: #ff5277;
+}
+
+/* Link */
+.link {
+  margin-top: 15px;
+  display: block;
+  color: #ff5277;
+  cursor: pointer;
+}
+
+/* Hide Create Form */
+#createBox {
+  display: none;
 }
 
 /* Animation */
@@ -67,12 +81,36 @@ button:hover {
 
 <body>
 
-<div class="box">
+<!-- Login -->
+<div class="box" id="loginBox">
   <h2>Login ❤️</h2>
   <input type="text" placeholder="Username">
   <input type="password" placeholder="Password">
   <button>Login</button>
+  <span class="link" onclick="showCreate()">Create ID</span>
 </div>
+
+<!-- Create ID -->
+<div class="box" id="createBox">
+  <h2>Create ID 💖</h2>
+  <input type="text" placeholder="Name">
+  <input type="date">
+  <input type="email" placeholder="Email">
+  <button>Create</button>
+  <span class="link" onclick="showLogin()">Back to Login</span>
+</div>
+
+<script>
+function showCreate() {
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("createBox").style.display = "block";
+}
+
+function showLogin() {
+  document.getElementById("loginBox").style.display = "block";
+  document.getElementById("createBox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
