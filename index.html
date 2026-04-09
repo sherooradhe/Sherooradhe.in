@@ -1,81 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Radha🥰🥰</title>
-
-<style>
-body {
-  margin: 0;
-  height: 100vh;
+    <title>Radha🥰🥰</title>
+  <body>
   background: blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial;
   color: white;
-}
-
-.box {
   text-align: center;
+  font-family: Arial;
 }
+  </style>
 
-button {
-  padding: 12px 25px;
-  margin: 10px;
-  border: 2px;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.yes {
-  background: white;
-  color: #ff4b5c;
-}
-
-.no {
-  background: #fff;
-  color: red;
-  position: absolute;
-}
-</style>
-</head>
-
-<body onclick="playMusic()">
-
-<div class="box">
+<h1>Radhe Radhe 🙏</h1>
   
-  <div style="height:100vh; display:flex; justify-content:center; align-items:center;">
-  <h1 style="
-    font-size:70px;
-    color:white;
-    text-shadow: 0 0 10px red, 0 0 20px pink, 0 0 30px red;
-  ">Wellcome..🤗</div></h1>
-  <h1>Radhe🙏Radhe</h1>
-  <p>Aao andar chale 💫</p>
-
-  <button class="yes" onclick="goNext()">Yes</button>
-  <button class="no" id="noBtn">No</button>
-</div>
-
-<audio id="bgMusic" src="song.mp3" loop></audio>
-
-<script>
-function goNext(){
-  window.location.href = "page2.html";
-}
-
-let noBtn = document.getElementById("noBtn");
-
-noBtn.addEventListener("mouseover", ()=>{
-  noBtn.style.top = Math.random()*80 + "%";
-  noBtn.style.left = Math.random()*80 + "%";
-});
-
-function playMusic() {
-  let music = document.getElementById("bgMusic");
-  music.play();
-}
-</script>
 
 </body>
 </html>
